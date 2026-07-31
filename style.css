@@ -141,12 +141,12 @@ header#hero {
 }
 
 .hero-photo {
-    width: 140px;
-    height: 140px;
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--accent-color);
-    box-shadow: 0 0 24px var(--accent-glow);
+    border: 3px solid var(--accent-color);
+    box-shadow: 0 0 32px var(--accent-glow);
     flex-shrink: 0;
 }
 
@@ -646,8 +646,8 @@ header#hero {
     }
 
     .hero-photo {
-        width: 96px;
-        height: 96px;
+        width: 192px;
+        height: 192px;
     }
 
     .hero-title {
