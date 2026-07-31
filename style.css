@@ -1,17 +1,17 @@
 /* Design Tokens */
 :root {
-    --bg-color: #0f172a;
-    /* Slate 900 */
-    --card-bg: rgba(30, 41, 59, 0.7);
-    /* Slate 800, glassmorphism */
-    --text-primary: #f8fafc;
-    /* Slate 50 */
-    --text-secondary: #94a3b8;
-    /* Slate 400 */
-    --accent-color: #2dd4bf;
-    /* Teal 400 */
-    --accent-glow: rgba(45, 212, 191, 0.3);
-    --border-color: rgba(148, 163, 184, 0.1);
+    --bg-color: #14110d;
+    /* Warm near-black */
+    --card-bg: rgba(42, 34, 27, 0.7);
+    /* Warm dark brown, glassmorphism */
+    --text-primary: #faf5ee;
+    /* Warm off-white */
+    --text-secondary: #a89a89;
+    /* Warm taupe */
+    --accent-color: #f5a524;
+    /* Amber */
+    --accent-glow: rgba(245, 165, 36, 0.3);
+    --border-color: rgba(168, 154, 138, 0.12);
 
     --font-main: 'Inter', system-ui, -apple-system, sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
@@ -34,8 +34,8 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     background-image:
-        radial-gradient(circle at 12% 15%, rgba(45, 212, 191, 0.06) 0%, transparent 40%),
-        radial-gradient(circle at 88% 75%, rgba(129, 140, 248, 0.06) 0%, transparent 40%);
+        radial-gradient(circle at 12% 15%, rgba(245, 165, 36, 0.07) 0%, transparent 40%),
+        radial-gradient(circle at 88% 75%, rgba(225, 87, 43, 0.07) 0%, transparent 40%);
 }
 
 a {
@@ -45,7 +45,7 @@ a {
 }
 
 a:hover {
-    color: #5eead4;
+    color: #fbbf24;
     text-shadow: 0 0 10px var(--accent-glow);
 }
 
@@ -70,7 +70,7 @@ ul {
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
-    background: rgba(15, 23, 42, 0.8);
+    background: rgba(20, 17, 13, 0.8);
     backdrop-filter: blur(12px);
     z-index: 1000;
     border-bottom: 1px solid var(--border-color);
@@ -128,19 +128,26 @@ header#hero {
     padding-top: var(--nav-height);
 }
 
+.hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+}
+
 .hero-content {
-    max-width: 800px;
+    max-width: 650px;
 }
 
 .hero-photo {
-    width: 128px;
-    height: 128px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--accent-color);
     box-shadow: 0 0 24px var(--accent-glow);
-    margin-bottom: 24px;
-    display: block;
+    flex-shrink: 0;
 }
 
 .hero-super {
@@ -155,7 +162,7 @@ header#hero {
     font-size: 5rem;
     font-weight: 800;
     line-height: 1.1;
-    background: linear-gradient(to right, #f8fafc, #94a3b8);
+    background: linear-gradient(to right, #faf5ee, #a89a89);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -201,12 +208,12 @@ header#hero {
 
 .btn-primary {
     background: var(--accent-color);
-    color: #0f172a;
+    color: #14110d;
 }
 
 .btn-primary:hover {
-    background: #5eead4;
-    color: #0f172a;
+    background: #fbbf24;
+    color: #14110d;
     box-shadow: 0 0 20px var(--accent-glow);
 }
 
@@ -217,7 +224,7 @@ header#hero {
 }
 
 .btn-secondary:hover {
-    background: rgba(45, 212, 191, 0.1);
+    background: rgba(245, 165, 36, 0.1);
 }
 
 /* Section headings */
@@ -233,7 +240,7 @@ header#hero {
     content: '';
     flex: 1;
     height: 1px;
-    background: rgba(148, 163, 184, 0.2);
+    background: rgba(168, 154, 138, 0.2);
     margin-left: 20px;
 }
 
@@ -255,7 +262,7 @@ header#hero {
 .project-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
-    border-color: rgba(45, 212, 191, 0.3);
+    border-color: rgba(245, 165, 36, 0.3);
 }
 
 .project-card.featured {
@@ -273,7 +280,6 @@ header#hero {
 .project-card.featured .project-visual {
     width: 50%;
     border-right: 1px solid var(--border-color);
-    aspect-ratio: auto;
 }
 
 .project-card.featured .project-content {
@@ -295,6 +301,8 @@ header#hero {
 .project-visual img,
 .project-visual video,
 .project-visual iframe {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -346,7 +354,7 @@ header#hero {
 .tech-stack span {
     font-family: var(--font-mono);
     font-size: 0.75rem;
-    background: rgba(45, 212, 191, 0.1);
+    background: rgba(245, 165, 36, 0.1);
     color: var(--accent-color);
     padding: 4px 8px;
     border-radius: 4px;
@@ -378,7 +386,7 @@ header#hero {
 }
 
 .code-btn:hover {
-    background: rgba(45, 212, 191, 0.1);
+    background: rgba(245, 165, 36, 0.1);
     text-decoration: none;
 }
 
@@ -414,7 +422,7 @@ header#hero {
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-    border-color: rgba(45, 212, 191, 0.3);
+    border-color: rgba(245, 165, 36, 0.3);
 }
 
 .card-header {
@@ -463,13 +471,13 @@ header#hero {
 
 .grade-badge {
     display: inline-block;
-    background: rgba(45, 212, 191, 0.1);
+    background: rgba(245, 165, 36, 0.1);
     color: var(--accent-color);
     padding: 2px 8px;
     border-radius: 4px;
     font-size: 0.8rem;
     margin-left: 10px;
-    border: 1px solid rgba(45, 212, 191, 0.2);
+    border: 1px solid rgba(245, 165, 36, 0.2);
 }
 
 /* Skills */
@@ -495,7 +503,7 @@ header#hero {
 }
 
 .skill-tag {
-    background: rgba(30, 41, 59, 0.8);
+    background: rgba(36, 29, 23, 0.8);
     border: 1px solid var(--border-color);
     padding: 8px 16px;
     border-radius: 20px;
@@ -507,7 +515,7 @@ header#hero {
 .skill-tag:hover {
     color: var(--accent-color);
     border-color: var(--accent-color);
-    background: rgba(45, 212, 191, 0.05);
+    background: rgba(245, 165, 36, 0.05);
 }
 
 .lang-grid {
@@ -571,7 +579,7 @@ header#hero {
 .contact-item:hover {
     border-color: var(--accent-color);
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(45, 212, 191, 0.15);
+    box-shadow: 0 5px 15px rgba(245, 165, 36, 0.15);
     color: var(--accent-color);
 }
 
@@ -608,7 +616,7 @@ header#hero {
         position: absolute;
         top: var(--nav-height);
         right: 0;
-        background: rgba(15, 23, 42, 0.97);
+        background: rgba(20, 17, 13, 0.97);
         width: 100%;
         padding: 20px 5%;
         gap: 18px;
@@ -629,6 +637,17 @@ header#hero {
     .project-card.featured .project-content {
         width: 100%;
         padding: 25px;
+    }
+
+    .hero-inner {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .hero-photo {
+        width: 96px;
+        height: 96px;
     }
 
     .hero-title {
