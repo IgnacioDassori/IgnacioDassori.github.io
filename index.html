@@ -61,34 +61,54 @@
 
                 <!-- Featured: Quadruped -->
                 <article class="project-card featured">
-                    <div class="project-visual">
-                        <div class="visual-placeholder"
-                            style="background: linear-gradient(135deg, #0f172a, #134e4a, #0f172a);">
-                            VAE-CPG Gait Control<br>Unitree Laikago &middot; PyBullet
+                    <div class="featured-main">
+                        <div class="project-visual">
+                            <img src="assets/images/quadruped-pipeline.png"
+                                alt="VAE-CPG pipeline: VAE encodes terrain image, MLP policy combines latent code with robot and CPG state to produce motor commands for the Laikago robot">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Four-Legged Gait Control via the Fusion of Computer Vision and
+                                Reinforcement Learning</h3>
+                            <span class="project-subtitle">Published &middot; 27th International Conference on
+                                Information Fusion, 2024</span>
+                            <div class="tech-stack">
+                                <span>PyTorch</span>
+                                <span>PyBullet</span>
+                                <span>PPO</span>
+                                <span>VAE</span>
+                            </div>
+                            <p class="project-desc">
+                                A reinforcement learning framework (PPO) fused with a Central Pattern Generator to
+                                adapt quadruped locomotion policies over rough terrain, using autoencoder-based
+                                representation learning to extract compact visual features from RGB observations for
+                                control.
+                            </p>
+                            <div class="project-links">
+                                <a href="assets/docs/Quadruped_Gait_Control_Paper.pdf" target="_blank"
+                                    class="code-btn">Paper</a>
+                                <a href="https://www.youtube.com/watch?v=M2bbDcFlnnE" target="_blank"
+                                    class="code-btn">Video</a>
+                                <a href="https://github.com/IgnacioDassori/Quadruped" target="_blank"
+                                    class="code-btn">Code</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Four-Legged Gait Control via the Fusion of Computer Vision and
-                            Reinforcement Learning</h3>
-                        <span class="project-subtitle">Published &middot; 27th International Conference on
-                            Information Fusion, 2024</span>
-                        <div class="tech-stack">
-                            <span>PyTorch</span>
-                            <span>PyBullet</span>
-                            <span>PPO</span>
-                            <span>VAE</span>
-                        </div>
-                        <p class="project-desc">
-                            A reinforcement learning framework (PPO) fused with a Central Pattern Generator to adapt
-                            quadruped locomotion policies over rough terrain, using autoencoder-based representation
-                            learning to extract compact visual features from RGB observations for control.
-                        </p>
-                        <div class="project-links">
-                            <a href="assets/docs/Quadruped_Gait_Control_Paper.pdf" target="_blank"
-                                class="code-btn">Paper</a>
-                            <a href="https://github.com/IgnacioDassori/Quadruped" target="_blank"
-                                class="code-btn">Code</a>
-                        </div>
+                    <div class="result-gallery">
+                        <figure>
+                            <img src="assets/images/quadruped-env.png"
+                                alt="Simulated obstacle-filled environment with ladder, crate, and cone" loading="lazy">
+                            <figcaption>Obstacle-filled test environment</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="assets/images/quadruped-reward.jpeg"
+                                alt="Mean reward over training timesteps, CPG method vs non-CPG method" loading="lazy">
+                            <figcaption>Mean reward: CPG vs. non-CPG</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="assets/images/quadruped-motor-commands.png"
+                                alt="Hip and knee joint motor command curves over one gait cycle" loading="lazy">
+                            <figcaption>Learned hip &amp; knee motor commands</figcaption>
+                        </figure>
                     </div>
                 </article>
 
@@ -121,8 +141,8 @@
                 <!-- KinectFusion -->
                 <article class="project-card">
                     <div class="project-visual">
-                        <img src="assets/images/kinectfusion-pipeline.png" alt="KinectFusion reconstruction pipeline"
-                            loading="lazy">
+                        <video src="assets/videos/kinectfusion-pipeline-comparison.mp4" autoplay loop muted
+                            playsinline aria-label="KinectFusion pipeline comparison"></video>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">KinectFusion Re-Implementation</h3>
@@ -168,7 +188,8 @@
                             localization &mdash; as part of a 40+ member interdisciplinary student team.
                         </p>
                         <div class="project-links">
-                            <span class="code-btn" style="cursor: default;">Ongoing</span>
+                            <a href="https://github.com/The-RoboTUM/tron_docker_sim" target="_blank"
+                                class="code-btn">Code</a>
                         </div>
                     </div>
                 </article>
