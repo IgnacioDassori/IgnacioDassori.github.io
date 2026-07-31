@@ -132,6 +132,17 @@ header#hero {
     max-width: 800px;
 }
 
+.hero-photo {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 0 24px var(--accent-glow);
+    margin-bottom: 24px;
+    display: block;
+}
+
 .hero-super {
     color: var(--accent-color);
     font-family: var(--font-mono);
@@ -282,47 +293,13 @@ header#hero {
 }
 
 .project-visual img,
-.project-visual video {
+.project-visual video,
+.project-visual iframe {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.project-card.featured .project-visual img {
-    object-fit: contain;
-    background: #fff;
-}
-
-/* Results gallery strip under a featured project */
-.result-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--border-color);
-    border-top: 1px solid var(--border-color);
-}
-
-.result-gallery figure {
-    margin: 0;
-    background: var(--card-bg);
-    display: flex;
-    flex-direction: column;
-}
-
-.result-gallery img {
-    width: 100%;
-    height: 170px;
-    object-fit: contain;
-    background: #fff;
-    padding: 8px;
-}
-
-.result-gallery figcaption {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--text-secondary);
-    text-align: center;
-    padding: 8px 10px 14px;
+    border: none;
+    display: block;
 }
 
 .visual-placeholder {
@@ -652,10 +629,6 @@ header#hero {
     .project-card.featured .project-content {
         width: 100%;
         padding: 25px;
-    }
-
-    .result-gallery {
-        grid-template-columns: 1fr;
     }
 
     .hero-title {
