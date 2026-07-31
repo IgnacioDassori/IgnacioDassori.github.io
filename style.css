@@ -344,6 +344,18 @@ header#hero {
     display: block;
 }
 
+.status-badge {
+    display: inline-block;
+    background: rgba(245, 165, 36, 0.1);
+    color: var(--accent-color);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(245, 165, 36, 0.2);
+    margin-bottom: 15px;
+}
+
 .tech-stack {
     display: flex;
     flex-wrap: wrap;

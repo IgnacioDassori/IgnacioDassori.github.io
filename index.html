@@ -100,6 +100,42 @@
                     </div>
                 </article>
 
+                <!-- Master's Thesis: VI-SLAM -->
+                <article class="project-card">
+                    <div class="project-visual">
+                        <div class="visual-placeholder"
+                            style="background: linear-gradient(135deg, #2a221b, #14110d);">
+                            Visual-Inertial SLAM<br>Learned Dense Front-End
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Tightly-Coupled Visual-Inertial SLAM with a Learned Dense
+                            Front-End</h3>
+                        <span class="project-subtitle">M.Sc. Thesis, TUM</span>
+                        <span class="status-badge">In Progress</span>
+                        <div class="tech-stack">
+                            <span>SLAM</span>
+                            <span>Visual-Inertial Odometry</span>
+                            <span>Factor Graphs</span>
+                            <span>3D Foundation Models</span>
+                        </div>
+                        <p class="project-desc">
+                            Modern learned SLAM systems (VGGT-SLAM, MASt3R-SLAM, ViSTA) regress dense 3D pointmaps
+                            directly from images, producing excellent scene geometry, but being monocular, they
+                            cannot recover metric scale and their trajectories drift. This thesis fuses a learned
+                            pointmap front-end with an IMU inside a single probabilistic factor graph, using learned
+                            uncertainty to weight the visual geometry while the IMU pins down absolute scale and
+                            gravity. The core contribution is the coupling itself: defining the visual measurement,
+                            weighting it, assigning ownership of scale, and closing loops from the network's own
+                            predictions, toward a real-time system with metric, locally-consistent trajectories.
+                        </p>
+                        <div class="project-links">
+                            <span class="code-btn" style="cursor: default; opacity: 0.6;">Write-up coming
+                                soon</span>
+                        </div>
+                    </div>
+                </article>
+
                 <!-- FoamSurf -->
                 <article class="project-card">
                     <div class="project-visual">
