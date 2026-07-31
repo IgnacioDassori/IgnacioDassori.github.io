@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ignacio Dassori | Robotics &amp; AI Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400&display=swap"
+        rel="stylesheet">
+    <meta name="description"
+        content="Portfolio of Ignacio Dassori, Robotics and AI Engineer specializing in computer vision, deep learning, and autonomous systems.">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- NAVIGATION -->
+        <nav class="navbar">
+            <div class="nav-logo">Ignacio Dassori</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+        </nav>
+
+        <!-- HERO -->
+        <header id="hero">
+            <div class="hero-content">
+                <span class="hero-super">Hi, I'm</span>
+                <h1 class="hero-title">Ignacio Dassori</h1>
+                <h2 class="hero-subtitle">Robotics &amp; AI Engineer specializing in <span
+                        class="highlight">Computer Vision</span>, <span class="highlight">Deep Learning</span> &amp;
+                    <span class="highlight">Autonomous Systems</span>.
+                </h2>
+                <p class="hero-text">
+                    Experienced in developing robotic software, perception pipelines, and machine learning
+                    solutions for industrial and research applications. Currently finishing an M.Sc. in Robotics,
+                    Cognition, and Intelligence at the Technical University of Munich.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="assets/docs/CV_IgnacioDassori.pdf" target="_blank" class="btn btn-secondary">View
+                        CV</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- PROJECTS -->
+        <section id="projects">
+            <h2 class="section-title">Selected Projects</h2>
+            <div class="projects-grid">
+
+                <!-- Featured: Quadruped -->
+                <article class="project-card featured">
+                    <div class="project-visual">
+                        <div class="visual-placeholder"
+                            style="background: linear-gradient(135deg, #0f172a, #134e4a, #0f172a);">
+                            VAE-CPG Gait Control<br>Unitree Laikago &middot; PyBullet
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Four-Legged Gait Control via the Fusion of Computer Vision and
+                            Reinforcement Learning</h3>
+                        <span class="project-subtitle">Published &middot; 27th International Conference on
+                            Information Fusion, 2024</span>
+                        <div class="tech-stack">
+                            <span>PyTorch</span>
+                            <span>PyBullet</span>
+                            <span>PPO</span>
+                            <span>VAE</span>
+                        </div>
+                        <p class="project-desc">
+                            A reinforcement learning framework (PPO) fused with a Central Pattern Generator to adapt
+                            quadruped locomotion policies over rough terrain, using autoencoder-based representation
+                            learning to extract compact visual features from RGB observations for control.
+                        </p>
+                        <div class="project-links">
+                            <a href="assets/docs/Quadruped_Gait_Control_Paper.pdf" target="_blank"
+                                class="code-btn">Paper</a>
+                            <a href="https://github.com/IgnacioDassori/Quadruped" target="_blank"
+                                class="code-btn">Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- FoamSurf -->
+                <article class="project-card">
+                    <div class="project-visual">
+                        <img src="assets/images/foamsurf-teaser.jpg" alt="FoamSurf surface reconstruction teaser"
+                            loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">FoamSurf: High-Quality Surface Reconstruction Using RadFoam</h3>
+                        <span class="project-subtitle">Advanced Deep Learning for Computer Vision, TUM</span>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>CUDA</span>
+                            <span>C++</span>
+                        </div>
+                        <p class="project-desc">
+                            Lightweight extension of the Radiant Foam (RadFoam) paper adding monocular depth and
+                            normal priors to a CUDA raytracing pipeline, improving mesh quality over base RadFoam
+                            and other state-of-the-art methods.
+                        </p>
+                        <div class="project-links">
+                            <a href="assets/docs/FoamSurf_Report.pdf" target="_blank" class="code-btn">Report</a>
+                            <a href="https://github.com/matsgrobe/FoamSurf" target="_blank" class="code-btn">Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- KinectFusion -->
+                <article class="project-card">
+                    <div class="project-visual">
+                        <img src="assets/images/kinectfusion-pipeline.png" alt="KinectFusion reconstruction pipeline"
+                            loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">KinectFusion Re-Implementation</h3>
+                        <span class="project-subtitle">3D Scanning and Motion Capture, TUM</span>
+                        <div class="tech-stack">
+                            <span>C++</span>
+                            <span>CUDA</span>
+                            <span>OpenMP</span>
+                        </div>
+                        <p class="project-desc">
+                            Real-time RGB-D reconstruction pipeline with frame-to-model point-to-plane ICP tracking
+                            and TSDF volumetric fusion, with custom CUDA kernels achieving 47 FPS reconstruction.
+                        </p>
+                        <div class="project-links">
+                            <a href="assets/docs/KinectFusionTUM_Report.pdf" target="_blank"
+                                class="code-btn">Report</a>
+                            <a href="https://github.com/matsgrobe/KinectFusionTUM" target="_blank"
+                                class="code-btn">Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- RoboTUM Biped -->
+                <article class="project-card">
+                    <div class="project-visual">
+                        <div class="visual-placeholder"
+                            style="background: linear-gradient(135deg, #1e293b, #0f172a);">
+                            Biped Navigation Stack<br>Jetson &middot; LiDAR &middot; ROS2
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Autonomous Navigation for a Biped Robot</h3>
+                        <span class="project-subtitle">RoboTUM Senior Member</span>
+                        <div class="tech-stack">
+                            <span>ROS2</span>
+                            <span>Jetson</span>
+                            <span>LiDAR Fusion</span>
+                            <span>SLAM</span>
+                        </div>
+                        <p class="project-desc">
+                            Leading hardware and software integration of an autonomous navigation system for a biped
+                            robot &mdash; onboard Jetson compute, LiDAR sensor fusion, and real-time mapping and
+                            localization &mdash; as part of a 40+ member interdisciplinary student team.
+                        </p>
+                        <div class="project-links">
+                            <span class="code-btn" style="cursor: default;">Ongoing</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience">
+            <h2 class="section-title">Experience</h2>
+
+            <div class="timeline-item">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Robotics Software Engineer</div>
+                            <div class="card-subtitle">Maquintel SpA</div>
+                        </div>
+                        <div class="card-date">Apr 2024 &ndash; Sep 2024</div>
+                    </div>
+                    <div class="card-details">
+                        <p>Santiago, Chile</p>
+                        <ul>
+                            <li>Developed robotics software for autonomous underground inspection platforms deployed
+                                in mining environments, focusing on perception, data processing, and system
+                                reliability.</li>
+                            <li>Implemented multi-modal perception pipelines combining LiDAR and RGB data for
+                                automated anomaly detection and infrastructure assessment.</li>
+                            <li>Generated automated inspection reports and reconstructed 3D assets from sensor data
+                                to support client decision-making and maintenance planning.</li>
+                            <li>Developed a GPS-guided unmanned ground vehicle (UGV), including navigation and
+                                control software, enabling autonomous operation in outdoor mining environments.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Computer Vision Engineer</div>
+                            <div class="card-subtitle">PSINet</div>
+                        </div>
+                        <div class="card-date">Jan 2023 &ndash; Dec 2023</div>
+                    </div>
+                    <div class="card-details">
+                        <p>Santiago, Chile</p>
+                        <ul>
+                            <li>Started as an intern and transitioned into a part-time engineering role, contributing
+                                to production computer vision systems for industrial safety applications.</li>
+                            <li>Built and curated large-scale computer vision datasets for training automated risk
+                                detection models in mining environments.</li>
+                            <li>Designed and implemented an end-to-end computer vision pipeline covering real-time
+                                video ingestion, model inference, and database integration.</li>
+                            <li>Optimized and deployed YOLOX-based object detection models through CCTV camera feed
+                                for real-time inference.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Introduction to Deep Learning Tutor</div>
+                            <div class="card-subtitle">Technical University of Munich</div>
+                        </div>
+                        <div class="card-date">Apr 2025 &ndash; Jul 2026</div>
+                    </div>
+                    <div class="card-details">
+                        <p>Munich, Germany</p>
+                        <ul>
+                            <li>Supported the delivery of TUM's Introduction to Deep Learning course, mentoring
+                                1,000+ students through weekly office hours, technical discussions, and programming
+                                support.</li>
+                            <li>Designed and maintained practical deep learning assignments, evaluated student
+                                submissions, and contributed to the development and grading of the final
+                                examination.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Internship</div>
+                            <div class="card-subtitle">Advanced Mining Technology Center</div>
+                        </div>
+                        <div class="card-date">Jan 2021 &ndash; May 2021</div>
+                    </div>
+                    <div class="card-details">
+                        <p>Santiago, Chile</p>
+                        <ul>
+                            <li>Developed realistic simulated underground environments in Gazebo for evaluating
+                                robotics algorithms.</li>
+                            <li>Evaluated and benchmarked SLAM algorithms for autonomous exploration, analyzing
+                                performance across simulated underground scenarios.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Senior Member</div>
+                            <div class="card-subtitle">RoboTUM</div>
+                        </div>
+                        <div class="card-date">Oct 2024 &ndash; Present</div>
+                    </div>
+                    <div class="card-details">
+                        <p>Munich, Germany</p>
+                        <ul>
+                            <li>Core member leading interdisciplinary robotics projects involving 40+ students across
+                                software, hardware, and AI domains.</li>
+                            <li>Lead hardware and software integration of an autonomous navigation system for a biped
+                                robot, including Jetson onboard compute, LiDAR sensor fusion, and real-time mapping
+                                and localization.</li>
+                            <li>Secured &euro;10,000 in external sponsorship funding through industry partnerships.</li>
+                            <li>Organized technical workshops covering ROS2, Git, reinforcement learning, and
+                                embedded robotics development.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education">
+            <h2 class="section-title">Education</h2>
+
+            <div class="timeline-item">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Technical University of Munich (TUM)</div>
+                            <div class="card-subtitle">M.Sc. Robotics, Cognition, Intelligence</div>
+                        </div>
+                        <div class="card-date">Oct 2024 &ndash; Expected Sep 2026</div>
+                    </div>
+                    <div class="card-details">
+                        <p>Munich, Germany <span class="grade-badge">GPA: 1.5 / 4.0 (1.0 best)</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Universidad de Chile</div>
+                            <div class="card-subtitle">B.Sc. in Engineering Sciences, Major in Electrical
+                                Engineering</div>
+                        </div>
+                        <div class="card-date">Mar 2018 &ndash; Feb 2024</div>
+                    </div>
+                    <div class="card-details">
+                        <p>Santiago, Chile <span class="grade-badge">GPA: 6.6 / 7.0 (7.0 best)</span></p>
+                        <ul>
+                            <li>Outstanding Student of the Faculty of Physical and Mathematical Sciences
+                                &mdash; 2018, 2019, 2020, 2021, 2022, 2023.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills">
+            <h2 class="section-title">Skills &amp; Languages</h2>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">CUDA</span>
+                        <span class="skill-tag">CMake</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">MATLAB</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Machine Learning</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">Reinforcement Learning</span>
+                        <span class="skill-tag">3D Reconstruction</span>
+                        <span class="skill-tag">GTSAM</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Robotics</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ROS / ROS2</span>
+                        <span class="skill-tag">SLAM</span>
+                        <span class="skill-tag">Sensor Fusion</span>
+                        <span class="skill-tag">Gazebo</span>
+                        <span class="skill-tag">MuJoCo</span>
+                        <span class="skill-tag">PyBullet</span>
+                        <span class="skill-tag">Motion Planning</span>
+                        <span class="skill-tag">Robot Control</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Hardware</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Jetson Orin Nano</span>
+                        <span class="skill-tag">Jetson Thor</span>
+                        <span class="skill-tag">Raspberry Pi</span>
+                        <span class="skill-tag">LiDAR</span>
+                        <span class="skill-tag">RGB-D Cameras</span>
+                        <span class="skill-tag">IMU</span>
+                        <span class="skill-tag">GNSS</span>
+                        <span class="skill-tag">UR10</span>
+                        <span class="skill-tag">Clearpath Husky</span>
+                        <span class="skill-tag">3D Printing</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lang-grid">
+                <div class="lang-item">
+                    <span class="lang-name">Spanish</span>
+                    <span class="lang-level">Native</span>
+                </div>
+                <div class="lang-item">
+                    <span class="lang-name">English</span>
+                    <span class="lang-level">C1</span>
+                </div>
+                <div class="lang-item">
+                    <span class="lang-name">German</span>
+                    <span class="lang-level">C1</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-lead">
+                I'm currently looking for opportunities in robotics and AI engineering &mdash; feel free to reach
+                out about roles, collaborations, or just to talk shop.
+            </p>
+
+            <div class="contact-links">
+                <a href="mailto:ignacio.dassori.w@gmail.com" class="contact-item">
+                    <span class="contact-icon">&#9993;&#65039;</span>
+                    <span>ignacio.dassori.w@gmail.com</span>
+                </a>
+                <a href="https://github.com/IgnacioDassori" target="_blank" class="contact-item">
+                    <span class="contact-icon">&#128025;</span>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/ignaciodasoriwalker" target="_blank" class="contact-item">
+                    <span class="contact-icon">&#128188;</span>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="tel:+4915112935966" class="contact-item">
+                    <span class="contact-icon">&#128222;</span>
+                    <span>+49 1511 2935966</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <p>&copy; 2026 Ignacio Dassori. All rights reserved.</p>
+            <p style="font-size: 0.8rem;">Built with HTML, CSS &amp; JavaScript.</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
