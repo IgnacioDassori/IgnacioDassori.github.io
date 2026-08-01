@@ -379,6 +379,37 @@ header#hero {
     line-height: 1.5;
 }
 
+.project-desc.clamped {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.project-desc.clamped.expanded {
+    display: block;
+    -webkit-line-clamp: unset;
+    overflow: visible;
+    margin-bottom: 20px;
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.read-more-btn:hover {
+    text-decoration: underline;
+}
+
 .project-links {
     display: flex;
     gap: 12px;

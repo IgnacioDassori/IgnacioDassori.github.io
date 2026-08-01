@@ -25,3 +25,12 @@ if (navToggle && navLinks) {
         link.addEventListener('click', () => navLinks.classList.remove('open'));
     });
 }
+
+// Expandable project descriptions
+document.querySelectorAll('.read-more-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+        const desc = btn.previousElementSibling;
+        const expanded = desc.classList.toggle('expanded');
+        btn.textContent = expanded ? 'Show less' : 'Show more';
+    });
+});
